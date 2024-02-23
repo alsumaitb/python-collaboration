@@ -1,25 +1,23 @@
 # Assignment 04 To Do list
 
 def main():
-    tasks = input("Enter your tasks: ").split()
-    
-    
-    
+    tasks = []
+    add_tasks(tasks)
+    view_tasks(tasks)
     
 def add_tasks(tasks):
-    question = ("Do you have any tasks you would like to add? ")
-    if question == "yes":
-        add = input("Enter the tasks you would like to add: ")
-        tasks.append(add)
-    return tasks
+    adding = input("Enter your tasks: ")
+    tasks.append(adding)
+    return list(tasks)
         
 def view_tasks(tasks):
     for task in tasks:
-        print(f"Your tasks are {task}")
+        print(f"Your tasks are: {task}")
+        
+
+        
+main()
                
-def mark_tasks(tasks):
+
     
-   
-    
-def delete_tasks(tasks):
 
