@@ -14,8 +14,12 @@ def add_tasks(tasks):
     return tasks
         
 def view_tasks(tasks):
-        
+    for task in tasks:
+        print(f"Your tasks are {task}")
+               
 def mark_tasks(tasks):
+    
+   
     
 def delete_tasks(tasks):
 
