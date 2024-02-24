@@ -8,6 +8,7 @@ def main():
         print("2. View All Tasks")
         print("3. Mark Task as Completed")
         print("4. Delete Task")
+        print("5. Sort Task")
         print("0. Quit Program")
         
         user_selection = input("Please enter a option from the menu above: ")
@@ -22,6 +23,8 @@ def main():
             mark_task(tasks)
         elif user_selection == '4':
             delete_task(tasks)
+        elif user_selection == '5':
+            sort_task(tasks)
         else:
             print("Invalid menu selection.")
     
@@ -38,10 +41,18 @@ def view_tasks(tasks):
 def mark_task(tasks):
     question = int(input("Please enter the task number you would like to mark: ")) - 1
     tasks[question][1] = "Complete"
+    print("Select option 2 to view changes.")
     
 def delete_task(tasks):
     question = int(input("Please enter the task number you would like to delete: ")) - 1
     tasks.pop(question)
+    print("Select option 2 to view changes.")
+    
+# New feature for branching
+def sort_task(tasks):
+    tasks.sort()
+    print("Select option 2 to view changes.")
+    
         
 main()
                
