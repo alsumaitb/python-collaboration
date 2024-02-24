@@ -4,7 +4,7 @@ def main():
     tasks = []
     add_tasks(tasks)
     view_tasks(tasks)
-    mark_tasks(tasks)
+   
     
     
 def add_tasks(tasks):
@@ -19,15 +19,12 @@ def view_tasks(tasks):
     if question == "yes":
         for task in tasks:
             print(f"Your tasks are: {task}")
+    return tasks
+
+
             
-def mark_tasks(tasks):
-    question = input("Would you like to mark any tasks? ")
-    if question == "yes":
-        for index, task in tasks:
-            print(f"{index}. {task}")
-        mark = input("Enter the task number you would like to mark: ")
-        
-        tasks[mark] += "Complete"
+
+    print("Task deleted.")
     
     return list(tasks)
 
