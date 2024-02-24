@@ -14,7 +14,7 @@ def main():
         if user_selection == 0:
             break
         elif user_selection == 1:
-            pass
+            add_task(tasks)
         elif user_selection == 2:
             pass
         elif user_selection == 3:
@@ -22,12 +22,9 @@ def main():
         elif user_selection == 4:
             pass
     
-def add_tasks(tasks):
-    question = input("Would you like to add tasks? ")
-    if question == "yes":
-        adding = input("Enter your tasks: ")
-        tasks.append(adding)
-    return list(tasks)
+def add_task(tasks):
+    new_task = input("Enter the task: ")
+    tasks.append(new_task)
         
 def view_tasks(tasks):
     question = input("Would you like to view your tasks? ")
