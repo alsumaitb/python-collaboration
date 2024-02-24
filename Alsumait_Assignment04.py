@@ -10,18 +10,20 @@ def main():
         print("4. Delete Task")
         print("0. Quit Program")
         
-        user_selection = int(input("Please enter a option from the menu above: "))
+        user_selection = input("Please enter a option from the menu above: ")
         
-        if user_selection == 0:
+        if user_selection == '0':
             break
-        elif user_selection == 1:
+        elif user_selection == '1':
             add_task(tasks)
-        elif user_selection == 2:
+        elif user_selection == '2':
             view_tasks(tasks)
-        elif user_selection == 3:
+        elif user_selection == '3':
             mark_task(tasks)
-        elif user_selection == 4:
-            pass
+        elif user_selection == '4':
+            delete_task(tasks)
+        else:
+            print("Invalid menu selection.")
     
 def add_task(tasks):
     new_task = input("Enter the task: ")
@@ -37,32 +39,9 @@ def mark_task(tasks):
     question = int(input("Please enter the task number you would like to mark: ")) - 1
     tasks[question][1] = "Complete"
     
-    
-    
-    
-    
-    
-
-
-            
-
-    
-
-
-
-
-        
-       
-     
-        
-        
-        
-     
-
-
-  
-        
-
+def delete_task(tasks):
+    question = int(input("Please enter the task number you would like to delete: ")) - 1
+    tasks.pop(question)
         
 main()
                
