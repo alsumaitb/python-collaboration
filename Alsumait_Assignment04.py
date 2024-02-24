@@ -3,6 +3,7 @@
 def main():
     tasks = []
     while True:
+        print("Menu")
         print("1. Add New Task")
         print("2. View All Tasks")
         print("3. Mark Task as Completed")
@@ -16,7 +17,7 @@ def main():
         elif user_selection == 1:
             add_task(tasks)
         elif user_selection == 2:
-            pass
+            view_tasks(tasks)
         elif user_selection == 3:
             pass
         elif user_selection == 4:
@@ -24,15 +25,14 @@ def main():
     
 def add_task(tasks):
     new_task = input("Enter the task: ")
-    tasks.append(new_task)
+    tasks.append([new_task, "Incomplete"])
         
 def view_tasks(tasks):
-    question = input("Would you like to view your tasks? ")
-    if question == "yes":
-        print(tasks)
-        #for task in tasks:
-         #   print(f"Your tasks are: {task}")
-    return tasks
+    for i in range(len(tasks)):
+        index = i + 1
+        print(f"{index}. {tasks[i]}")
+        
+    print()
 
 
             
