@@ -23,13 +23,15 @@ def view_tasks(tasks):
 def mark_tasks(tasks):
     question = input("Would you like to mark any tasks? ")
     if question == "yes":
-        for index, task in enumerate(tasks, 1):
+        for index, task in tasks:
             print(f"{index}. {task}")
-        choice = input("Enter the task number you would like to mark: ")
-        index = int(choice)
-        tasks[index-1] += "Complete"
+        mark = input("Enter the task number you would like to mark: ")
+        
+        tasks[mark] += "Complete"
     
-    return tasks
+    return list(tasks)
+
+
 
 
         
