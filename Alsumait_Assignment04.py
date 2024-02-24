@@ -19,7 +19,7 @@ def main():
         elif user_selection == 2:
             view_tasks(tasks)
         elif user_selection == 3:
-            pass
+            mark_task(tasks)
         elif user_selection == 4:
             pass
     
@@ -30,9 +30,18 @@ def add_task(tasks):
 def view_tasks(tasks):
     for i in range(len(tasks)):
         index = i + 1
-        print(f"{index}. {tasks[i]}")
-        
+        print(f"{index}. {tasks[i]}")   
     print()
+    
+def mark_task(tasks):
+    question = int(input("Please enter the task number you would like to mark: ")) - 1
+    tasks[question][1] = "Complete"
+    
+    
+    
+    
+    
+    
 
 
             
